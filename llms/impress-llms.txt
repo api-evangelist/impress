@@ -1,0 +1,85 @@
+# Impress
+
+> Impress (legal entity Smile2Impress SL, Barcelona, Spain) is Europe's largest chain of
+> clear-aligner orthodontic clinics. Founded in 2019 by Vladimir Lupenko, Diliara Lupenko
+> and Dr. Khaled Kasem, it runs 110+ doctor-led clinics in ten countries and has treated
+> more than 500,000 patients, combining in-clinic 3D intraoral scanning and patented
+> diagnostics with AI-assisted treatment planning and remote monitoring through a patient
+> mobile app.
+
+<!--
+generated: 2026-08-23
+method: generated
+source: apis.yml + repo artifacts (API Evangelist enrichment pipeline). Impress does not
+publish an llms.txt of its own; https://smile2impress.com/llms.txt returned HTTP 404.
+-->
+
+## What Impress sells
+
+Impress sells orthodontic treatment, not software. Its products are clear aligner
+treatment for adults, teens and children, clear retainers (sold as an annual
+subscription), and professional teeth whitening, delivered through owned clinics and
+booked from the consumer website. It is an official Invisalign provider in the US.
+
+## API surface — none published
+
+There is no public Impress API. As of 2026-08-23 contract discovery found:
+
+- No OpenAPI or Swagger document on any host (`/openapi.json`, `/openapi.yaml`,
+  `/swagger.json`, `/v1/openapi.json`, `/api-docs`, `/docs`, `/redoc` all miss).
+- No GraphQL endpoint (`/graphql`, `/api/graphql` 404 on the web host).
+- No MCP server and no A2A agent card (`/.well-known/agent-card.json` and the legacy
+  `/.well-known/agent.json` miss on every host).
+- No AsyncAPI, webhook catalog, gRPC/Protobuf or WSDL contract.
+- No `/.well-known/` document of any kind — see `well-known/impress-well-known.yml`
+  for the full probe record.
+- No developer portal, API reference, getting-started guide, SDK, CLI, sandbox,
+  status page, changelog, Postman collection or public support site.
+
+`api.smile2impress.com` is a live host and resolves to AWS, but it is the private
+backend for the Impress patient app and the Impress Clinics practitioner app. Every
+anonymous request to it — root, spec paths, `.well-known` paths — returns
+`403 {"message":"Forbidden"}`. It is not a developer surface.
+
+## GitHub
+
+- [github.com/smile2impress](https://github.com/smile2impress): the company's real
+  engineering organization (created 2020-05-18, 6 public repositories). It carries
+  internal tooling only — forks of `pg-trx-outbox`, `ts-fp-di`, `ts-fp-di-mikroorm`,
+  `ts-fp-di-rxjs` and `keep`, plus one first-party original, `codebase-inspector`
+  (published as the `fe-explorer` static-analysis CLI for React/Redux/TypeScript
+  codebases). None of these is a client library for an Impress service.
+
+Note: `github.com/impress-org` is a DIFFERENT company (Impress.org / GiveWP, WordPress
+plugins) and is not related to this Impress.
+
+## Company
+
+- [Website](https://smile2impress.com/)
+- [About](https://smile2impress.com/us/about-us)
+- [Pricing](https://smile2impress.com/us/prices)
+- [Clinic locations](https://smile2impress.com/us/locations)
+- [Blog](https://smile2impress.com/us/blog)
+
+## Legal
+
+- [Terms and conditions (US, PDF)](https://static.smile2impress.com/website/v2/live/media/policy/terms-and-conditions_us.pdf)
+- [Privacy policy (US)](https://smile2impress-5970216.hs-sites.com/us/privacy-policy/)
+- [Cookies policy (US, PDF)](https://static.smile2impress.com/website/v2/live/media/policy/cookies-policy_us.pdf)
+
+## Mobile apps
+
+- [Impress (patient app) — App Store](https://apps.apple.com/us/app/impress/id1549666197)
+- [Impress (patient app) — Google Play](https://play.google.com/store/apps/details?id=com.smile2impress.monitoring)
+
+## Domain security posture (probed 2026-08-23)
+
+smile2impress.com: HTTPS with TLS 1.3, certificate valid to 2027-03-03; no HSTS; DNSSEC
+not enabled; no CAA records; SPF and DMARC both published, DMARC policy `p=none`.
+No security.txt, no published vulnerability disclosure program, no trust center.
+
+## About this file
+
+This file is a third-party profile written by [API Evangelist](https://apievangelist.com),
+not by Impress. It is generated from public sources only. Corrections and removal are
+free — open an issue on the profile repository.

@@ -1,10 +1,28 @@
 aid: impress
 name: Impress
-description: 'Impress is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Impress (legal entity Smile2Impress SL) is a Barcelona-founded chain of
+  clear-aligner orthodontic clinics, launched in 2019 by Vladimir Lupenko, Diliara Lupenko
+  and Dr. Khaled Kasem, and today Europe''s largest invisible-orthodontics clinic network.
+  It runs 110+ doctor-led clinics across ten countries — Spain, Italy, Portugal, France,
+  the United Kingdom, Germany, the Netherlands, Sweden, Ukraine and the United States —
+  has treated more than 500,000 patients, and pairs in-clinic 3D intraoral scanning and
+  patented diagnostics with AI-assisted treatment planning and remote monitoring through
+  its patient mobile app. Impress publishes no developer portal, API reference, SDK, CLI,
+  status page, changelog or machine-readable specification of any kind: contract discovery
+  found no OpenAPI, Swagger, GraphQL SDL, AsyncAPI, MCP server, A2A agent card or
+  .well-known document on any host it operates. Its one API host, api.smile2impress.com,
+  is the private backend for the Impress patient app and the Impress Clinics practitioner
+  app; it resolves and is live but answers HTTP 403 to every anonymous request, including
+  every spec and .well-known path probed. Its GitHub organization, github.com/smile2impress,
+  is real but carries only internal engineering tooling — five forks of Node.js/TypeScript
+  infrastructure libraries and one first-party static-analysis tool, fe-explorer — and no
+  client library for any Impress service. Products sold are orthodontic treatment,
+  retainers and teeth whitening, priced and booked through the consumer site.'
+image: https://static.smile2impress.com/website/v2/live/media/images/fav/og-image.jpg
 url: https://raw.githubusercontent.com/api-evangelist/impress/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
+x-harvest-source-url: https://forgeglobal.com/impress_stock/
 x-tier: stub
 x-tier-reason: harvest
 specificationVersion: '0.20'
@@ -12,6 +30,28 @@ created: '2026-08-23'
 modified: '2026-08-23'
 tags:
 - Company
+- Health Care
+- Dental
+- Orthodontics
+- Clear Aligners
+- Clinics
+- Consumer Health
+- Telehealth
+- Artificial Intelligence
+- Mobile Apps
+- Spain
+tags_raw:
+- Company
+- Health Care
+- Dental
+- Orthodontics
+- Clear Aligners
+- Clinics
+- Consumer Health
+- Telehealth
+- Artificial Intelligence
+- Mobile Apps
+- Spain
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +59,45 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/impress-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/impress_stock/
+  url: https://smile2impress.com/
+- type: Pricing
+  url: https://smile2impress.com/us/prices
+- type: Blog
+  url: https://smile2impress.com/us/blog
+- type: TermsOfService
+  url: https://static.smile2impress.com/website/v2/live/media/policy/terms-and-conditions_us.pdf
+- type: PrivacyPolicy
+  url: https://smile2impress-5970216.hs-sites.com/us/privacy-policy/
+- type: GitHubOrganization
+  url: https://github.com/smile2impress
+- type: LLMsTxt
+  url: llms/impress-llms.txt
+x-enrichment:
+  date: '2026-08-23'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Impress sells orthodontic treatment through 110+ owned clinics and ships software only
+    as two end-user mobile apps; its single API host api.smile2impress.com is the private
+    backend for those apps and answers 403 {"message":"Forbidden"} to every anonymous
+    request, including every OpenAPI, GraphQL and .well-known path, and no developer
+    portal, reference or spec exists on any other host.
+  evidence:
+  - url: https://api.smile2impress.com/openapi.json
+    status: 403
+  - url: https://smile2impress.com/openapi.json
+    status: 404
+  - url: https://smile2impress.com/.well-known/agent-card.json
+    status: 404
+  - url: https://smile2impress.com/llms.txt
+    status: 404
+  - url: https://smile2impress.com/
+    status: 200
+  checked: '2026-08-23'

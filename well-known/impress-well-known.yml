@@ -1,0 +1,66 @@
+generated: '2026-08-23'
+method: probed
+source: live GET probes of /.well-known/* on every Impress host
+note: >-
+  Recorded absence. Impress serves no /.well-known document on any host it operates.
+  smile2impress.com (Next.js) answers 404 with the site's HTML 404 page on every path;
+  api.smile2impress.com (the private backend for the Impress patient and Impress Clinics
+  apps, AWS-fronted) answers 403 {"message":"Forbidden"} to every anonymous request
+  including these paths; static.smile2impress.com is an S3/CloudFront asset origin that
+  answers 403 AccessDenied. No WellKnown, APICatalog or SecurityTxt pointer is emitted in
+  apis.yml because nothing was served — this file documents an absence, not a presence.
+hosts:
+- host: smile2impress.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: api.smile2impress.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+  - path: /.well-known/oauth-protected-resource
+    status: 403
+  - path: /.well-known/api-catalog
+    status: 403
+  - path: /.well-known/ai-plugin.json
+    status: 403
+  - path: /.well-known/agent-card.json
+    status: 403
+  - path: /.well-known/agent.json
+    status: 403
+- host: static.smile2impress.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+  - path: /.well-known/oauth-protected-resource
+    status: 403
+  - path: /.well-known/api-catalog
+    status: 403
+  - path: /.well-known/ai-plugin.json
+    status: 403
+  - path: /.well-known/agent-card.json
+    status: 403
+  - path: /.well-known/agent.json
+    status: 403
