@@ -18,6 +18,17 @@ description: 'Impress (legal entity Smile2Impress SL) is a Barcelona-founded cha
   infrastructure libraries and one first-party static-analysis tool, fe-explorer — and no
   client library for any Impress service. Products sold are orthodontic treatment,
   retainers and teeth whitening, priced and booked through the consumer site.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://static.smile2impress.com/website/v2/live/media/images/fav/og-image.jpg
 url: https://raw.githubusercontent.com/api-evangelist/impress/refs/heads/main/apis.yml
 x-type: company
