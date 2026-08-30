@@ -1,0 +1,14 @@
+{
+  "repo": "impress",
+  "feeds": [
+    {
+      "source": "https://smile2impress.com/us/prices",
+      "feed_url": "https://smile2impress.com/us/prices",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-08-30T22:33:40Z"
+}
