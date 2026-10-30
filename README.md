@@ -64,5 +64,84 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Impress is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/impress_stock/
+Impress (legal entity Smile2Impress SL) is a Barcelona-founded chain of clear-aligner orthodontic clinics, launched in 2019 by Vladimir Lupenko, Diliara Lupenko and Dr. Khaled Kasem, and today Europe's largest invisible-orthodontics clinic network. It runs 110+ doctor-led clinics across ten countries — Spain, Italy, Portugal, France, the United Kingdom, Germany, the Netherlands, Sweden, Ukraine and the United States — has treated more than 500,000 patients, and pairs in-clinic 3D intraoral scanning and patented diagnostics with AI-assisted treatment planning and remote monitoring through its patient mobile app. Impress publishes no developer portal, API reference, SDK, CLI, status page, changelog or machine-readable specification of any kind: contract discovery found no OpenAPI, Swagger, GraphQL SDL, AsyncAPI, MCP server, A2A agent card or .well-known document on any host it operates. Its one API host, api.smile2impress.com, is the private backend for the Impress patient app and the Impress Clinics practitioner app; it resolves and is live but answers HTTP 403 to every anonymous request, including every spec and .well-known path probed. Its GitHub organization, github.com/smile2impress, is real but carries only internal engineering tooling — five forks of Node.js/TypeScript infrastructure libraries and one first-party static-analysis tool, fe-explorer — and no client library for any Impress service. Products sold are orthodontic treatment, retainers and teeth whitening, priced and booked through the consumer site.
+
+**Areas:** Company · Healthcare · Dental · Orthodontics · Clear Aligners · Clinics · Consumer Health · Telehealth · Artificial Intelligence · Mobile App · Spain
+
+## Impress on APIs.io
+
+Everything profiled for Impress is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/impress/](https://apis.io/providers/impress/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Impress Domain Security](https://apis.io/security/impress/impress-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://smile2impress.com/)
+- [Pricing](https://smile2impress.com/us/prices)
+- [Blog](https://smile2impress.com/us/blog)
+- [Terms of service](https://static.smile2impress.com/website/v2/live/media/policy/terms-and-conditions_us.pdf)
+- [Privacy policy](https://smile2impress-5970216.hs-sites.com/us/privacy-policy/)
+- [GitHub](https://github.com/smile2impress)
+
+## API Evangelist rating
+
+**Kin Score 12.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 31.6 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.3** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/impress/](https://apis.io/providers/impress/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Impress: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/impress/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
